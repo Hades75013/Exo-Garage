@@ -1,12 +1,24 @@
 package moteurs;
 
-public class MoteurHybride extends Moteur {
+import enumerations.TypeMoteur;
 
-    public String cylindre;
-    public double prix;
+public class MoteurHybride extends Moteur {
 
     public MoteurHybride(String cylindre, double prix) {
         this.cylindre = cylindre;
         this.prix = prix;
     }
+
+    double getPrix() {
+        return this.prix;
+    }
+
+    String getCylindre() {
+        return this.cylindre;
+    }
+
+    TypeMoteur getTypeMoteur() {
+        return type=TypeMoteur.HYBRIDE;
+    }
+
 }

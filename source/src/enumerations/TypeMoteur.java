@@ -1,5 +1,6 @@
 package enumerations;
 
+
 public enum TypeMoteur {
 
     DIESEL("DIESEL"),
@@ -13,4 +14,5 @@ public enum TypeMoteur {
     TypeMoteur (String name){
         this.name=name;
     }
+
 }

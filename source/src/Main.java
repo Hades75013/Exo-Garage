@@ -1,7 +1,11 @@
-import garage.Garage;
+import garage.*;
 import moteurs.*;
 import options.*;
 import vehicules.*;
+
+import java.io.IOException;
+import java.io.StringReader;
+import java.io.StringWriter;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,5 +51,27 @@ public class Main {
         d4_2.addOption(new GPS());
         d4_2.addOption(new VitreElectrique());
         garage.addVoiture(d4_2);
+
+        StringWriter sw = new StringWriter();
+        StringReader sr;
+
+        try {
+            sw.write(garage.toString());
+            sw.close();
+
+            sr = new StringReader(sw.toString());
+            int i ;
+
+            String str = "";
+            while(( i = sr.read()) != -1)
+                str += (char) i;
+
+            System.out.println(str);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
+
+

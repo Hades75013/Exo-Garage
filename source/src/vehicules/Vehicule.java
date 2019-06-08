@@ -1,38 +1,48 @@
 package vehicules;
 
-import enumerations.Marque;
-import moteurs.Moteur;
-import options.Option;
-
+import enumerations.*;
+import moteurs.*;
+import options.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class Vehicule {
 
-    private double prix;
-    private String nom;
+    protected double prix;
+    protected String nom;
     private List<Option> options;
-    private Marque nomMarque;
+    protected Marque nomMarque;
     private Moteur moteur;
+
 
     public Vehicule() {
         options = new ArrayList<>();
     }
 
+    public double getValeurTotale() {
+
+        double valeurTotale = this.getPrix();
+        for(Option uneoption : options){
+            valeurTotale+=uneoption.getPrix();
+        }
+        return valeurTotale;
+    }
 
     public String toString() {
-        return "";
+        return " "+this.getMarque()+" : "+this.getNom()+" "+this.getMoteur()+" ("+this.getPrix()+"€) "+this.getOption();
     }
 
     public void addOption(Option option) {
         options.add(option);
     }
 
-    public void setMoteur(Moteur mot) {
-        moteur = mot;
+    public void setMoteur(Moteur moteur) {
+        this.moteur = moteur;
     }
 
-    public Moteur getMoteur() {
+    private Moteur getMoteur() {
         return moteur;
     }
 
@@ -40,7 +50,7 @@ public class Vehicule {
         return prix;
     }
 
-    public List<Option> getOption() {
+    private List<Option> getOption() {
         return options;
     }
 

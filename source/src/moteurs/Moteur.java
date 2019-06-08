@@ -2,29 +2,21 @@ package moteurs;
 
 import enumerations.TypeMoteur;
 
-public class Moteur {
+public abstract class Moteur {
 
-    private TypeMoteur type;
-    private String cylindre;
-    private double prix;
+    protected TypeMoteur type;
+    protected String cylindre;
+    protected double prix;
 
-    public void Moteur (String cylindre, double prix){
-        this.cylindre=cylindre;
-        this.prix=prix;
-    }
+    Moteur(){}
 
-    public void Moteur (TypeMoteur type,String cylindre, double prix){
-        this.type=type;
-        this.cylindre=cylindre;
-        this.prix=prix;
-    }
+    abstract double getPrix();
+
+    abstract String getCylindre();
+
+    abstract TypeMoteur getTypeMoteur();
 
     public String toString(){
-        String str = "";
-        return str;
-    }
-
-    public double getPrix(){
-        return prix;
+        return "Moteur "+this.getTypeMoteur()+" "+this.getCylindre();
     }
 }
