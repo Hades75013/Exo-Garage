@@ -1,10 +1,9 @@
-package moteurs;
+package garage.vehicules.moteurs;
 
-import enumerations.TypeMoteur;
+public class MoteurElectrique extends Moteur{
 
-public class MoteurEssence extends Moteur{
 
-    public MoteurEssence(String cylindre, double prix) {
+    public MoteurElectrique(String cylindre, double prix) {
         this.cylindre=cylindre;
         this.prix=prix;
     }
@@ -18,7 +17,8 @@ public class MoteurEssence extends Moteur{
     }
 
     TypeMoteur getTypeMoteur() {
-        return type=TypeMoteur.ESSENCE;
+        return this.type=TypeMoteur.ELECTRIQUE;
     }
+
 
 }

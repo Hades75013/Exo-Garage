@@ -1,6 +1,4 @@
-package vehicules;
-
-import enumerations.Marque;
+package garage.vehicules;
 
 public class A300B extends Vehicule {
 

@@ -1,6 +1,4 @@
-package vehicules;
-
-import enumerations.Marque;
+package garage.vehicules;
 
 public class D4 extends Vehicule {
 

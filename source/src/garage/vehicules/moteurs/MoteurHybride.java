@@ -1,6 +1,4 @@
-package moteurs;
-
-import enumerations.TypeMoteur;
+package garage.vehicules.moteurs;
 
 public class MoteurHybride extends Moteur {
 
@@ -18,7 +16,7 @@ public class MoteurHybride extends Moteur {
     }
 
     TypeMoteur getTypeMoteur() {
-        return type=TypeMoteur.HYBRIDE;
+        return this.type=TypeMoteur.HYBRIDE;
     }
 
 }

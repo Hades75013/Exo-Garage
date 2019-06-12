@@ -1,14 +1,15 @@
-package vehicules;
+package garage.vehicules;
 
-import enumerations.*;
-import moteurs.*;
-import options.*;
+import garage.vehicules.moteurs.*;
+import garage.vehicules.options.*;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
 
-public class Vehicule {
+public class Vehicule implements Serializable {
 
     protected double prix;
     protected String nom;

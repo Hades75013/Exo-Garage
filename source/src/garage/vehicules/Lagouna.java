@@ -1,6 +1,4 @@
-package vehicules;
-
-import enumerations.Marque;
+package garage.vehicules;
 
 public class Lagouna extends Vehicule {
 

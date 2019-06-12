@@ -1,6 +1,8 @@
-package options;
+package garage.vehicules.options;
 
-public class GPS implements Option{
+import java.io.Serializable;
+
+public class GPS implements Option, Serializable {
 
     public double getPrix() {
         return 113.5;

@@ -1,4 +1,6 @@
-package options;
+package garage.vehicules.options;
+
+
 
 public interface Option {
 

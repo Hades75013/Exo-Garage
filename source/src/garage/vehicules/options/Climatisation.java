@@ -1,6 +1,8 @@
-package options;
+package garage.vehicules.options;
 
-public class Climatisation implements Option{
+import java.io.Serializable;
+
+public class Climatisation implements Option, Serializable {
 
     public double getPrix() {
         return 347.3;

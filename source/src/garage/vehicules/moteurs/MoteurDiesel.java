@@ -1,6 +1,4 @@
-package moteurs;
-
-import enumerations.TypeMoteur;
+package garage.vehicules.moteurs;
 
 public class MoteurDiesel extends Moteur{
 
@@ -18,9 +16,6 @@ public class MoteurDiesel extends Moteur{
     }
 
     TypeMoteur getTypeMoteur() {
-        return type=TypeMoteur.DIESEL;
+        return this.type=TypeMoteur.DIESEL;
     }
-
-
-
-}
+    }
