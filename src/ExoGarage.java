@@ -10,7 +10,7 @@ import garage.vehicules.moteurs.MoteurHybride;
 import garage.vehicules.options.*;
 
 
-public class Main {
+public class ExoGarage {
     public static void main(String[] args) {
         Garage garage = new Garage();
         System.out.println(garage);
