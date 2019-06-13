@@ -16,10 +16,10 @@ public class Garage implements Serializable {
     public Garage() {
         super();
 
-        try {
-            FileInputStream fis = new FileInputStream("garage.txt");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-
+        try (
+                FileInputStream fis = new FileInputStream("garage.txt");
+                ObjectInputStream ois = new ObjectInputStream(fis)
+        ) {
             voitures = (List<Vehicule>) ois.readObject();
         } catch (IOException e) {
             out.println("Aucune voiture sauvegardée !");
@@ -27,6 +27,7 @@ public class Garage implements Serializable {
             e.printStackTrace();
         }
     }
+
 
     public String toString() {
 
@@ -40,17 +41,22 @@ public class Garage implements Serializable {
         return str.toString();
     }
 
+
     public void addVoiture(Vehicule voiture) {
         voitures.add(voiture);
 
-        try {
-            FileOutputStream fos = new FileOutputStream("garage.txt");
-            BufferedOutputStream bos = new BufferedOutputStream(fos);
-            ObjectOutputStream oos = new ObjectOutputStream(bos);
-
+        try (
+                FileOutputStream fos = new FileOutputStream("garage.txt");
+                BufferedOutputStream bos = new BufferedOutputStream(fos);
+                ObjectOutputStream oos = new ObjectOutputStream(bos)
+        ) {
             oos.writeObject(voitures);
         } catch (NullPointerException | IOException e) {
             e.printStackTrace();
         }
+
+
     }
+
+
 }
