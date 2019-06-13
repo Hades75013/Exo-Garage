@@ -1,5 +1,7 @@
 package garage.vehicules;
 
+import static garage.vehicules.Marque.TROEN;
+
 public class D4 extends Vehicule {
 
     public double getPrix() {
@@ -11,7 +13,7 @@ public class D4 extends Vehicule {
     }
 
     public Marque getMarque() {
-        return this.nomMarque = Marque.TROEN;
+        return this.nomMarque = TROEN;
     }
 
 }

@@ -1,5 +1,7 @@
 package garage.vehicules.moteurs;
 
+import static garage.vehicules.moteurs.TypeMoteur.ELECTRIQUE;
+
 public class MoteurElectrique extends Moteur {
 
 
@@ -17,7 +19,7 @@ public class MoteurElectrique extends Moteur {
     }
 
     TypeMoteur getTypeMoteur() {
-        return this.type = TypeMoteur.ELECTRIQUE;
+        return this.type = ELECTRIQUE;
     }
 
 

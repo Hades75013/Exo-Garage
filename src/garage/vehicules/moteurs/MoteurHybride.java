@@ -1,5 +1,7 @@
 package garage.vehicules.moteurs;
 
+import static garage.vehicules.moteurs.TypeMoteur.HYBRIDE;
+
 public class MoteurHybride extends Moteur {
 
     public MoteurHybride(String cylindre, double prix) {
@@ -16,7 +18,7 @@ public class MoteurHybride extends Moteur {
     }
 
     TypeMoteur getTypeMoteur() {
-        return this.type = TypeMoteur.HYBRIDE;
+        return this.type = HYBRIDE;
     }
 
 }

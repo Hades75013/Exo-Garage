@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public abstract class Moteur implements Serializable {
 
-    protected TypeMoteur type;
-    protected String cylindre;
-    protected double prix;
+    TypeMoteur type;
+    String cylindre;
+    double prix;
 
     Moteur() {
     }

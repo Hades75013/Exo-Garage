@@ -10,14 +10,14 @@ import java.util.List;
 
 public class Vehicule implements Serializable {
 
-    protected double prix;
-    protected String nom;
-    protected Marque nomMarque;
+    Marque nomMarque;
+    private double prix;
+    private String nom;
     private List<Option> options;
     private Moteur moteur;
 
 
-    public Vehicule() {
+    Vehicule() {
         options = new ArrayList<>();
     }
 

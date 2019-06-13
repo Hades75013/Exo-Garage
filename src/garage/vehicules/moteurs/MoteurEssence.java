@@ -1,5 +1,7 @@
 package garage.vehicules.moteurs;
 
+import static garage.vehicules.moteurs.TypeMoteur.ESSENCE;
+
 public class MoteurEssence extends Moteur {
 
     public MoteurEssence(String cylindre, double prix) {
@@ -16,7 +18,7 @@ public class MoteurEssence extends Moteur {
     }
 
     TypeMoteur getTypeMoteur() {
-        return this.type = TypeMoteur.ESSENCE;
+        return this.type = ESSENCE;
     }
 
 }

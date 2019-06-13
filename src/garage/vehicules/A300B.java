@@ -1,5 +1,7 @@
 package garage.vehicules;
 
+import static garage.vehicules.Marque.PIGEOT;
+
 public class A300B extends Vehicule {
 
     public double getPrix() {
@@ -11,7 +13,7 @@ public class A300B extends Vehicule {
     }
 
     public Marque getMarque() {
-        return this.nomMarque = Marque.PIGEOT;
+        return this.nomMarque = PIGEOT;
     }
 }
 

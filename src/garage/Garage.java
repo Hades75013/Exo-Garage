@@ -21,9 +21,7 @@ public class Garage implements Serializable {
             voitures = (List<Vehicule>) ois.readObject();
         } catch (IOException e) {
             System.out.println("Aucune voiture sauvegardée !");
-        } catch (NullPointerException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (NullPointerException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
@@ -33,12 +31,12 @@ public class Garage implements Serializable {
 
         System.out.println("****************************\n*  Garage OpenClassrooms   *\n****************************");
 
-        String str = "";
+        StringBuilder str = new StringBuilder();
 
         for (Vehicule voiture : voitures) {
-            str += " + Voiture " + voiture.toString() + " d'une valeure totale de " + voiture.getValeurTotale() + "€ \n";
+            str.append(" + Voiture ").append(voiture.toString()).append(" d'une valeure totale de ").append(voiture.getValeurTotale()).append("€ \n");
         }
-        return str;
+        return str.toString();
     }
 
 
@@ -51,9 +49,7 @@ public class Garage implements Serializable {
                 ObjectOutputStream oos = new ObjectOutputStream(bos)
         ) {
             oos.writeObject(voitures);
-        } catch (NullPointerException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (NullPointerException | IOException e) {
             e.printStackTrace();
         }
 
